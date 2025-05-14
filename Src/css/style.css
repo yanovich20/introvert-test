@@ -1,0 +1,19 @@
+body{
+    position:relative;
+}
+.wrapper{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+}
+.loader{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translateY(-50%) translateX(-50%);
+    width:300px;
+    height:auto;
+}
+.hidden{
+    display:none;
+}
