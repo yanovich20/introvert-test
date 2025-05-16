@@ -20,7 +20,7 @@ widgetNameIntr = function () {
             </div>`
             );
         if(window.location.href.indexOf("contacts")!==-1||window.location.href.indexOf("companies")!==-1){
-            let debug = contact.closest(".linked-form__multiple-container").on("click", ".js-linked-with-actions[data-pei-code='" + type + "'] .tips-item[data-type='search']", function () {
+            contact.closest(".linked-form__multiple-container").on("click", ".js-linked-with-actions[data-pei-code='" + type + "'] .tips-item[data-type='search']", function () {
             window.open("http://letmegooglethat.com/?q=" + $(this).closest(".linked-form__field__value").find("input[data-type='" + type + "']").val(), "_blank");
             window.open("https://yandex.ru/search/?text=" + $(this).closest(".linked-form__field__value").find("input[data-type='" + type + "']").val(), "_blank");
         });
@@ -39,6 +39,14 @@ widgetNameIntr = function () {
             self.myNewContactProcessor('phone');
             self.myNewContactProcessor('email');
         });
+        $("body").on("click",".control--suggest--list--item ",function(){
+            setTimeout(function(){
+            console.log("hello world!");
+            self.myNewContactProcessor('phone');
+            self.myNewContactProcessor('email');
+            },5000);
+        });
+         
         this.myNewContactProcessor('phone');
         this.myNewContactProcessor('email');
     };

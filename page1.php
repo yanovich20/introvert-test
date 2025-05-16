@@ -2,24 +2,42 @@
     <head>
 </head>
 <body>
-    <form id="form1" action="ajax1.php">
+    <form id="form1" action="/Src/ajax5tz.php?action=1" method="POST">
         <label>
             имя
         </label>
-        <input type="text" name="NAME" placeholder="Введите имя">
+        <input type="text" name="NAME_MY_AN" placeholder="Введите имя">
         <label>
             номер телефона
         </label>
-        <input type="text" name="PHONE" placeholder="Введите телефон">
+        <input type="text" name="PHONE_MY_AN" placeholder="Введите телефон">
         <label>
             email
         </label>
-        <input type="text" name="EMAIL" placeholder="Введите email">
+        <input type="text" name="EMAIL_MY_AN" placeholder="Введите email">
         <label>
             комментарий
         </label>
-        <input type="text" name="COMMMENT" placeholder="Коментарий">
+        <input type="hidden" name="STATUS_MY_AN" value="57230594"><!--Второй этап-->
+        <input type="text" name="COMMMENT_MY_AN" placeholder="Коментарий">
         <input type="submit" value="Отправить">
     </form>
+    <script type="text/javascript">
+(function(d, w, k) {
+    w.introvert_callback = function() {
+        try {
+            w.II = new IntrovertIntegration(k);
+        } catch (e) {console.log(e)}
+    };
+
+    var n = d.getElementsByTagName("script")[0],
+        e = d.createElement("script");
+
+    e.type = "text/javascript";
+    e.async = true;
+    e.src = "https://api.yadrocrm.ru/js/cache/"+ k +".js";
+    n.parentNode.insertBefore(e, n);
+})(document, window, '3363f0c5');
+</script>
 </body>
 </html>
