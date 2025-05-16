@@ -30,6 +30,7 @@
                     $(".loader").addClass("hidden");
                     if(dataObj.result=="success")
                     {
+                        console.log(dataObj);
                         data = dataObj.data;
                         let dates = [];
                         for(let key in data)
